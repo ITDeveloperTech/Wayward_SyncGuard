@@ -1,0 +1,16 @@
+{
+	"name": "@wayward/custom-mod",
+	"private": true,
+	"version": "1.0.0",
+	"main": "out/Mod.js",
+	"types": "out/Mod.d.ts",
+	"scripts": {
+		"clean": "npx rimraf ./out ./tsconfig.*tsbuildinfo",
+		"build": "npx tsc --build --pretty",
+		"watch": "npx tsc --build --watch --pretty --preserveWatchOutput"
+	},
+	"devDependencies": {
+		"@wayward/types": "^2.15.4-beta",
+		"typescript": "^6.0.0-beta"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "Custom Mod",
+	"description": "Custom mod for Wayward. Work in progress.",
+	"version": "1.0.0",
+	"author": "Endok",
+	"waywardVersion": "2.15.4-beta",
+	"unloadable": true,
+	"file": "out/Mod.js"
+}
