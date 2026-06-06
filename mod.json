@@ -1,9 +1,16 @@
 {
-	"name": "Custom Mod",
-	"description": "Custom mod for Wayward. Work in progress.",
-	"version": "1.0.0",
+	"name": "Sync Guard",
+	"description": "Reduces multiplayer desync risk from mass inventory moves. Logs container operations and rate-limits bulk transfers. Server-compatible.",
+	"version": "1.1.0",
 	"author": "Endok",
 	"waywardVersion": "2.15.4-beta",
 	"unloadable": true,
-	"file": "out/Mod.js"
+	"multiplayer": "compatible",
+	"file": "out/Mod.js",
+	"languages": [
+		"lang/english"
+	],
+	"tags": [
+		"User Interface"
+	]
 }
