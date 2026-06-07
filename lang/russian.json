@@ -1,0 +1,22 @@
+{
+	"extends": "Russian",
+	"dictionaries": {
+		"command": {
+			"modSyncGuardSyncguard": "syncguard"
+		},
+		"message": {
+			"modSyncGuardLoaded": "Sync Guard активен. Массовые переносы ограничены для снижения риска десинка.",
+			"modSyncGuardTooManyItems": "Sync Guard: переносите не более {0} предметов за раз.",
+			"modSyncGuardBatchStarted": "Sync Guard: переношу {0} предметов пачками по {1}.",
+			"modSyncGuardBatchStalled": "Sync Guard: перенос остановлен — контейнер заполнен или заблокирован (осталось {0}).",
+			"modSyncGuardRateLimited": "Sync Guard: подождите перед следующим переносом.",
+			"modSyncGuardOrderRateLimited": "Sync Guard: подождите перед повторной сортировкой контейнера.",
+			"modSyncGuardStats": "Sync Guard — переносы: {0}, массовые: {1}, пачки: {2}, отклонено: {3}, сортировки: {4}, дисконнекты: {5}, desync заблокирован: {6}",
+			"modSyncGuardAutoRejoin": "Sync Guard: переподключаюсь к серверу...",
+			"modSyncGuardDesyncSuppressed": "Sync Guard: обнаружен desync — вылет отменён. Ваш мир может отличаться от сервера.",
+			"modSyncGuardHelp": "Sync Guard: /syncguard stats | throttle on|off | batch on|off | autorejoin on|off | desynckick on|off | maxitems N | cooldown N | bulkcooldown N | verbose on|off",
+			"modSyncGuardConfigUpdated": "Настройка Sync Guard обновлена.",
+			"modSyncGuardUnknownOption": "Sync Guard: неизвестная опция. Используйте /syncguard help."
+		}
+	}
+}

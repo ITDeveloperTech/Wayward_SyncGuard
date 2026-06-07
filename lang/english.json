@@ -1,13 +1,20 @@
 {
 	"extends": "English",
 	"dictionaries": {
+		"command": {
+			"modSyncGuardSyncguard": "syncguard"
+		},
 		"message": {
 			"modSyncGuardLoaded": "Sync Guard active. Mass inventory moves are rate-limited to reduce desync risk.",
 			"modSyncGuardTooManyItems": "Sync Guard: move at most {0} items at once to avoid desync.",
+			"modSyncGuardBatchStarted": "Sync Guard: moving {0} items in batches of {1}.",
+			"modSyncGuardBatchStalled": "Sync Guard: batch move stopped — destination full or blocked ({0} items left).",
 			"modSyncGuardRateLimited": "Sync Guard: wait before moving more items.",
 			"modSyncGuardOrderRateLimited": "Sync Guard: wait before sorting containers again.",
-			"modSyncGuardStats": "Sync Guard stats — moves: {0}, bulk: {1}, throttled: {2}, order updates: {3}, disconnects: {4}",
-			"modSyncGuardHelp": "Sync Guard: /syncguard stats | throttle on|off | maxitems N | cooldown N | bulkcooldown N | verbose on|off",
+			"modSyncGuardStats": "Sync Guard stats — moves: {0}, bulk: {1}, batched: {2}, throttled: {3}, order: {4}, disconnects: {5}, desync blocked: {6}",
+			"modSyncGuardAutoRejoin": "Sync Guard: reconnecting to the server...",
+			"modSyncGuardDesyncSuppressed": "Sync Guard: desync detected — disconnect blocked. Your world may differ from the server.",
+			"modSyncGuardHelp": "Sync Guard: /syncguard stats | throttle on|off | batch on|off | autorejoin on|off | desynckick on|off | maxitems N | cooldown N | bulkcooldown N | verbose on|off",
 			"modSyncGuardConfigUpdated": "Sync Guard setting updated.",
 			"modSyncGuardUnknownOption": "Sync Guard: unknown option. Use /syncguard help."
 		}

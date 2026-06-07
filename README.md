@@ -4,7 +4,8 @@ Wayward mod that mitigates multiplayer desyncs caused by mass inventory/containe
 
 ## Features
 
-- Rate-limits bulk item moves and container sorting on the **authoritative server**
+- Rate-limits bulk item moves (`MoveItem`, `Drop`, `PickUpAllItems`) and container sorting on **both client and server** before the action runs (avoids lock-step desync)
+- Splits oversized moves into sequential batches of `maxitems` (default 25) instead of blocking them
 - Logs bulk container operations to `Wayward/logs/`
 - Tracks session and lifetime stats
 - Chat command: `/syncguard help`
@@ -25,7 +26,7 @@ The mod is linked into the game at `Wayward/mods/custom-mod`.
 3. Enable **Sync Guard** in the server mod list (or place it in the server `mods` folder for dedicated hosts).
 4. Use `/syncguard stats` in chat to inspect runtime stats.
 
-Throttling is enforced on the server in multiplayer. Clients only receive warnings for their own local player.
+Throttling runs on every peer in multiplayer so blocked moves never diverge between client and server. Players see warnings only for their own local character.
 
 ## Commands
 
@@ -33,6 +34,7 @@ Throttling is enforced on the server in multiplayer. Clients only receive warnin
 |---------|-------------|
 | `/syncguard stats` | Show session counters |
 | `/syncguard throttle on\|off` | Enable/disable throttling |
+| `/syncguard batch on\|off` | Split large moves into batches (default on) |
 | `/syncguard maxitems N` | Max items per single move (1–200) |
 | `/syncguard cooldown N` | Move cooldown in ms (0–5000) |
 | `/syncguard bulkcooldown N` | Bulk move cooldown in ms (0–10000) |
